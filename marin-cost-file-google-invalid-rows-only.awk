@@ -29,7 +29,7 @@ NR > 6 && NF > 0 && $3 == "Google"
     total_cost += $9;
 
     # Validate the tracking ID
-    if ($4 ~! /^$/)
+    if ($4 !~ /^$/)
     {
         print $0;
         missing_cost += $9;
